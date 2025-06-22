@@ -1,10 +1,10 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/universal",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
   "hostRequirements": {
     "cpus": 4
   },
   "waitFor": "onCreateCommand",
-  "updateContentCommand": "python3 -m pip install -r requirements.txt; python3 -m pip install xgboost; python3 -m pip install keras-visualizer; python3 -m pip install tensorflow; sudo apt update; sudo apt install graphviz -y",
+  "updateContentCommand": "sudo apt update; python3 -m pip install -r requirements.txt; sudo apt install graphviz -y",
   "postCreateCommand": "",
   "customizations": {
     "codespaces": {
@@ -18,4 +18,3 @@
     }
   }
 }
-
